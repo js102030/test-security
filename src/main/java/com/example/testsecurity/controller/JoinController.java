@@ -17,13 +17,14 @@ public class JoinController {
 
     @GetMapping("/join")
     public String joinPage() {
+        log.info("joinPage()");
         return "join";
     }
 
     @PostMapping("/joinProc")
     public String joinProcess(JoinDto joinDto) {
 
-        log.info("joinProcess 실행");
+        log.info("joinProcess()");
 
         joinService.joinUser(joinDto);
 
